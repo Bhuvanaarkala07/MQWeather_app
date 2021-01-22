@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="@dimen/marginSizeMedium"
+    android:background="@color/screen_background">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/details_top_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/details_toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginSizeMedium"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/bookmark_home"
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:gravity="center_vertical"
+                    android:minHeight="?attr/actionBarSize"
+                    android:paddingLeft="@dimen/marginSizeMedium"
+                    android:text="@string/app_name"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/textSizeExtraLarge" />
+
+                <ImageView
+                    android:id="@+id/important_icon"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:paddingRight="@dimen/marginSizeMedium"
+                    android:src="@drawable/ic_star"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintLeft_toRightOf="@id/bookmark_home"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/bookmark_date_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/marginSizeMedium"
+                android:text="Dec, 2021"
+                app:layout_constraintTop_toBottomOf="@id/details_toolbar_layout" />
+
+            <TextView
+                android:id="@+id/bookmark_time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/marginSizeMedium"
+                android:text="9:21"
+                app:layout_constraintTop_toBottomOf="@+id/bookmark_date_tv" />
+
+            <TextView
+                android:id="@+id/bookmark_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:textSize="@dimen/textSizeMedium"
+                android:textColor="@color/WhiteSmoke"
+                android:background="@drawable/button_with_round_corners"
+                app:layout_constraintTop_toBottomOf="@id/bookmark_time_tv" />
+
+            <TextView
+                android:id="@+id/bookmark_mintemp_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="@dimen/marginSizeMedium"
+                android:text="292"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bookmark_details" />
+
+            <TextView
+                android:id="@+id/bookmark_maxtemp_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/marginSizeMedium"
+                android:paddingRight="@dimen/marginSizeMedium"
+                android:text="294"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bookmark_mintemp_tv" />
+
+            <TextView
+                android:id="@+id/bookmark_pressure_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/marginSizeMedium"
+                android:paddingRight="@dimen/marginSizeMedium"
+                android:text="1017"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bookmark_maxtemp_tv" />
+
+            <TextView
+                android:id="@+id/bookmark_humidity_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/marginSizeMedium"
+                android:paddingRight="@dimen/marginSizeMedium"
+                android:text="68"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bookmark_pressure_tv" />
+
+            <TextView
+                android:id="@+id/bookmark_temp_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="56dp"
+                android:paddingLeft="@dimen/marginSizeMedium"
+                android:text="xxxx"
+                android:textSize="@dimen/textSizeExtraLarge"
+                android:textColor="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@+id/bookmark_time_tv"
+                tools:layout_editor_absoluteX="6dp" />
+
+
+            <TextView
+                android:id="@+id/bookmark_weather_info1_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginSizeMedium"
+                android:paddingLeft="@dimen/marginSizeMedium"
+                android:paddingRight="@dimen/marginSizeMedium"
+                android:text="68"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bookmark_humidity_tv" />
+
+            <TextView
+                android:id="@+id/bookmark_weather_info2_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="@dimen/marginSizeMedium"
+                android:paddingRight="@dimen/marginSizeMedium"
+                android:text="68"
+                android:visibility="gone"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/bookmark_weather_info1_tv" />
+
+            <TextView
+                android:id="@+id/bookmark_week_forecast_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/marginSizeExtraLarge"
+                android:paddingLeft="@dimen/marginSizeMedium"
+                android:text="@string/forecast"
+                android:textSize="@dimen/textSizeExtraLarge"
+                app:layout_constraintTop_toBottomOf="@+id/bookmark_temp_tv" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bookmark_week1_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/stdBtnHeight"
+                android:layout_marginLeft="@dimen/marginSizeMedium"
+                android:layout_marginTop="@dimen/marginSizeSmall"
+                android:layout_marginRight="@dimen/marginSizeMedium"
+                android:background="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@id/bookmark_week_forecast_tv">
+
+                <TextView
+                    android:id="@+id/bookmark_week1_temp_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/marginSizeMedium"
+                    android:text="@string/forecast"
+                    android:gravity="center_vertical"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:textColor="@color/WhiteSmoke"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textSize="@dimen/textSizeMedium" />
+
+                <TextView
+                    android:id="@+id/bookmark_week1_day_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/marginSizeMedium"
+                    android:text="@string/forecast"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/WhiteSmoke"
+                    android:textSize="@dimen/textSizeMedium"
+                    android:paddingRight="@dimen/paddingSizeSmall"
+                   app:layout_constraintRight_toRightOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bookmark_week2_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/stdBtnHeight"
+                android:layout_marginLeft="@dimen/marginSizeMedium"
+                android:layout_marginTop="@dimen/marginSizeSmall"
+                android:layout_marginRight="@dimen/marginSizeMedium"
+                android:background="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@id/bookmark_week1_layout" >
+
+                <TextView
+                    android:id="@+id/bookmark_week2_temp_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/marginSizeMedium"
+                    android:text="@string/forecast"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/WhiteSmoke"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textSize="@dimen/textSizeMedium" />
+
+                <TextView
+                    android:id="@+id/bookmark_week2_day_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/marginSizeMedium"
+                    android:text="@string/forecast"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/WhiteSmoke"
+                    android:textSize="@dimen/textSizeMedium"
+                    android:paddingRight="@dimen/paddingSizeSmall"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bookmark_week3_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/stdBtnHeight"
+                android:layout_marginLeft="@dimen/marginSizeMedium"
+                android:layout_marginTop="@dimen/marginSizeSmall"
+                android:layout_marginRight="@dimen/marginSizeMedium"
+                android:background="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@id/bookmark_week2_layout" >
+
+                <TextView
+                    android:id="@+id/bookmark_week3_temp_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/marginSizeMedium"
+                    android:text="@string/forecast"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/WhiteSmoke"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textSize="@dimen/textSizeMedium" />
+
+                <TextView
+                    android:id="@+id/bookmark_week3_day_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/marginSizeMedium"
+                    android:text="@string/forecast"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/WhiteSmoke"
+                    android:textSize="@dimen/textSizeMedium"
+                    android:paddingRight="@dimen/paddingSizeSmall"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bookmark_week4_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/stdBtnHeight"
+                android:layout_marginLeft="@dimen/marginSizeMedium"
+                android:layout_marginTop="@dimen/marginSizeSmall"
+                android:layout_marginRight="@dimen/marginSizeMedium"
+                android:background="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@id/bookmark_week3_layout" >
+
+                <TextView
+                    android:id="@+id/bookmark_week4_temp_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/marginSizeMedium"
+                    android:text="@string/forecast"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/WhiteSmoke"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textSize="@dimen/textSizeMedium" />
+
+                <TextView
+                    android:id="@+id/bookmark_week4_day_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/marginSizeMedium"
+                    android:text="@string/forecast"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/WhiteSmoke"
+                    android:textSize="@dimen/textSizeMedium"
+                    android:paddingRight="@dimen/paddingSizeSmall"
+                    app:layout_constraintRight_toRightOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bookmark_week5_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/stdBtnHeight"
+                android:layout_marginLeft="@dimen/marginSizeMedium"
+                android:layout_marginTop="@dimen/marginSizeSmall"
+                android:layout_marginRight="@dimen/marginSizeMedium"
+                android:background="@color/colorPrimary"
+                app:layout_constraintTop_toBottomOf="@id/bookmark_week4_layout" >
+
+                <TextView
+                    android:id="@+id/bookmark_week5_temp_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/marginSizeMedium"
+                    android:text="@string/forecast"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/WhiteSmoke"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:textSize="@dimen/textSizeMedium" />
+
+                <TextView
+                    android:id="@+id/bookmark_week5_day_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="@dimen/marginSizeMedium"
+                    android:text="@string/forecast"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/WhiteSmoke"
+                    android:textSize="@dimen/textSizeMedium"
+                    android:paddingRight="@dimen/paddingSizeSmall"
+                    app:layout_constraintRight_toRightOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

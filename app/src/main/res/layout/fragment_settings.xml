@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/screen_background">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_settings"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="?attr/actionBarSize"
+        android:minHeight="?attr/actionBarSize"
+        android:text="@string/settings"
+        android:background="@color/colorPrimary"
+        android:textSize="@dimen/textSizeExtraLarge"
+        android:gravity="center_vertical"
+        android:textColor="@color/colorPrimary"
+        app:titleTextColor="@color/colorPrimary"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/marginSizeSmall"
+        android:id="@+id/reset_bookmarks"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stdBtnHeight"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSizeMedium"
+        android:text="@string/reset_bookmarks"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/marginSizeMedium"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_settings"/>
+
+    <TextView
+        android:layout_marginTop="@dimen/marginSizeSmall"
+        android:id="@+id/app_version"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/stdBtnHeight"
+        android:textColor="@color/black"
+        android:textSize="@dimen/textSizeMedium"
+        android:text="@string/app_version"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="@dimen/marginSizeMedium"
+        app:layout_constraintTop_toBottomOf="@id/reset_bookmarks"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,28 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.MQWeather" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="progressBarStyle">@color/colorPrimary</item>
+        <item name="android:actionMenuTextColor">@color/WhiteSmoke</item>
+        <item name="android:textColorHint">@color/WhiteSmoke</item>
+        <item name="android:textColorSecondary">@color/colorPrimary</item>
+        <item name="homeAsUpIndicator">@drawable/ic_outline_keyboard_backspace_24px</item>
+        <item name="fontFamily">sans-serif</item>
+    </style>
+
+    <style name="Theme.NoActionBar" parent="Theme.MaterialComponents.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="homeAsUpIndicator">@color/white</item>
+        <item name="android:windowBackground">@color/WhiteSmoke</item>
+    </style>
+
+    <style name="AppTheme.ActionBar.Transparent" parent="Theme.MQWeather">
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="windowActionBarOverlay">true</item>
+        <item name="colorPrimary">@android:color/transparent</item>
+    </style>
+</resources>
