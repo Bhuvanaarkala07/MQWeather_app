@@ -22,7 +22,5 @@ My options on architecture for this application is clean architecture with MVVM 
 * It also provides much flexibility to incorporate SOLID priciples easily. 
 
 ### TDD 
-- TDD is is best approach test the code 
-- Added integration tests 
-- 
-- Uinit tests 
+-  TDD is is best approach test the code 
+- Added integration tests to test end points 
