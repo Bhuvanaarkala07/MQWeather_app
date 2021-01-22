@@ -44,7 +44,7 @@ class BookmarkAdapter(
         val bookmark = bookMarksLsit.get(position)
         holder.name.text = bookmark.name
         holder.temp.text =
-            bookmark.main?.temp?.toFloat()?.let { AppUtils.convertKelvinToCelsius(it).toString() }
+            bookmark.main?.temp?.toFloat()?.let { AppUtils.convertKelvinToCelsius(it).toString() } + "c"
         holder.mainLayout.setOnClickListener {
             listener.onTouch(bookmark)
         }
