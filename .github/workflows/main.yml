@@ -16,7 +16,7 @@ env:
 jobs:
 
  instrumentation-test:
-   runs-on: macos-latest
+   runs-on: macos-13
    timeout-minutes: 25
 
    steps:
